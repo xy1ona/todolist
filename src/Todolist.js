@@ -1,6 +1,7 @@
 import React,{Component, Fragment} from 'react';
 import TodoItem from './TodoItem';
-import Test from './Test'
+import Test from './Test';
+import axios from 'axios';
 import './style.css';
 
 class Todolist extends Component{
@@ -52,8 +53,14 @@ class Todolist extends Component{
     }
 
     //组件被挂载到页面之后，自动被执行
+    //ajax请求获取
     componentDidMount(){
         console.log('componentDidMount')
+        axios.get('/api/todolist').then(()=>{
+            alert('success');
+        }).catch(()=>{
+            alert('error');
+        })
     }
 
     //组件被更新之前， 他会自动被执行
