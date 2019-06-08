@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import 'antd/dist/antd.css';
-import store from './store'
+import store from './store1'
 import {
     getInitList,
     getTodoList,
@@ -8,7 +8,7 @@ import {
     getAddItemAction,
     getDeleteItemAction,
     initListAction
-} from './store/actionCreators'
+} from './store1/actionCreators'
 import TodlistUI from './TodoListUI'
 import axios from "axios";
 

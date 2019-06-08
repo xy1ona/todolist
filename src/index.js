@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Todolist from './Todolist'
-import Todolist1 from './Todolist1'
+// import Todolist from './Todolist';
+// import Todolist1 from './Todolist1';
+import Todolist2 from './Todolist2';
+import { Provider } from 'react-redux';
+import store from './store2';
 
-// import App from './App'
+const App = (
+    <Provider store={store}>
+        <Todolist2/>
+    </Provider>
+)
 
-ReactDOM.render(<Todolist1 />, document.getElementById('root'));
+ReactDOM.render(App, document.getElementById('root'));
 
