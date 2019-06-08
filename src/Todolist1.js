@@ -1,8 +1,16 @@
 import React, {Component} from 'react'
 import 'antd/dist/antd.css';
 import store from './store'
-import {getInputChangeAction,getAddItemAction, getDeleteItemAction} from './store/actionCreators'
+import {
+    getInitList,
+    getTodoList,
+    getInputChangeAction,
+    getAddItemAction,
+    getDeleteItemAction,
+    initListAction
+} from './store/actionCreators'
 import TodlistUI from './TodoListUI'
+import axios from "axios";
 
 class Todolist1 extends Component{
 
@@ -29,6 +37,11 @@ class Todolist1 extends Component{
                handleItemDelete={this.handleItemDelete}
             />
         )
+    }
+
+    componentDidMount(){
+       const action = getInitList();
+       store.dispatch(action);
     }
 
     handleInputChange(e){

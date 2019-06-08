@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react'
+import React, {Fragment} from 'react'
 import {Button, Input, List} from "antd";
 
 //无状态组件,当一个组件只有render函数，性能最优
